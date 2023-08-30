@@ -1,5 +1,7 @@
 PT HIJABLINK
+
 SISTEM WEB HRD
+
 terdiri dari data: golongan, jabatan, pegawai, gaji, presensi, dan penilaian kinerja
 
 1. Buat database dengan nama "hijablink" dan lakukan import file "hijablink.sql"
