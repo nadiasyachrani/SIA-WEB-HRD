@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Hijablink - Divisi HRD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('hrd.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 0px;
+        }
+
+        .content {
+            margin: 0 auto; /* Center align the content */
+            max-width: 1200px; /* Set max width for the content */
+            padding: 20px; /* Add padding to the content */
+            text-align: center;
+        }
+
+        .welcome-box {
+            background-color: #0B1B34;
+            color: #D7DBE4;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .welcome-box h1, .welcome-box h2, .welcome-box h4 {
+            margin: 5px 0;
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Set 3 columns */
+            grid-auto-rows: minmax(0, 1fr); /* Adjust row size */
+            gap: 20px;
+        }
+
+        .box {
+            background-color: #0B1B34;
+            color: #D7DBE4;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        .box a {
+            color: #D7DBE4;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .box i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .detail-box {
+            background-color: #7E8E9E;
+            color: #D7DBE4;
+            padding: 10px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .box:hover .detail-box {
+            background-color: #4A6284;
+        }
+    </style>
+    <script>
+        function confirmLogout(event) {
+          event.preventDefault(); // Mencegah tindakan default dari tautan
+      
+          var confirmation = confirm("Yakin anda akan logout?");
+          if (confirmation) {
+            window.location.href = event.currentTarget.getAttribute("href");
+          }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="welcome-box">
+            <h1>SELAMAT DATANG</h1>
+            <h2>PT Hijablink</h2>
+            <h4>Divisi HRD</h4>
+            <a class="logout-icon" href="login.php?logout=true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Log Out" onclick="confirmLogout(event)">
+                <i class="fas fa-sign-out-alt" style="color: #7E8E9E; position: fixed; top: 20px; right: 20px; font-size: 24px;"></i>
+              </a>              
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <a href="golongan.php">
+                    <i class="fas fa-users"></i>
+                    <br>
+                    <span>Golongan</span>
+                </a>
+                <div class="detail-box">
+                    <a href="golongan.php">detail</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="jabatan.php">
+                    <i class="fas fa-briefcase"></i>
+                    <br>
+                    <span>Jabatan</span>
+                </a>
+                <div class="detail-box">
+                    <a href="jabatan.php">detail</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="pegawai.php">
+                    <i class="fas fa-user"></i>
+                    <br>
+                    <span>Pegawai</span>
+                </a>
+                <div class="detail-box">
+                    <a href="pegawai.php">detail</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="gaji.php">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <br>
+                    <span>Gaji</span>
+                </a>
+                <div class="detail-box">
+                    <a href="gaji.php">detail</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="presensi.php">
+                    <i class="far fa-calendar-check"></i>
+                    <br>
+                    <span>Presensi</span>
+                </a>
+                <div class="detail-box">
+                    <a href="presensi.php">detail</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="penilaian_kinerja.php">
+                    <i class="fas fa-chart-line"></i>
+                    <br>
+                    <span>Penilaian Kinerja</span>
+                </a>
+                <div class="detail-box">
+                    <a href="penilaian_kinerja.php">detail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
